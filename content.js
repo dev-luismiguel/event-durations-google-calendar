@@ -43,14 +43,14 @@ var annotateNewCalendarEvents = function (rootEl) {
     if (eventChipElement.children.length <= 1) {
       return;
     }
-    var eventTimeElement = eventChipElement.children[1].children[0].children[1];
+    var eventTimeElement = eventChipElement.querySelector('.gVNoLb');
 
     if (!eventTimeElement) {
       return;
     }
 
     var nextSibling = $(eventTimeElement.nextElementSibling);
-    var eventMetadata = eventChipElement.children[0].textContent;
+    var eventMetadata = eventChipElement.querySelector('.ynRLnc').textContent;
     var diff = calculateDiff(eventMetadata);
 
     if (diff >= minimumDurationMs) {
@@ -65,6 +65,7 @@ var annotateNewCalendarEvents = function (rootEl) {
       } else {
         var durationElement = $(eventTimeElement).clone()
           .addClass('event-duration')
+          .removeClass('gVNoLb')
           .text(duration);
 
         durationElement.insertAfter(eventTimeElement);
