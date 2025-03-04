@@ -1,4 +1,4 @@
-// console.log(document.querySelector("div[data-eventchip]").getElementsByClassName('ynRLnc')[0].innerText);
+// console.log(document.querySelector("div[data-eventchip]").getElementsByClassName('XuJrye')[0].innerText);
 
 describe("calculateDiff", () => {
   const testCases = [

@@ -50,7 +50,10 @@ var annotateNewCalendarEvents = function (rootEl) {
     }
 
     var nextSibling = $(eventTimeElement.nextElementSibling);
-    var eventMetadata = eventChipElement.querySelector('.ynRLnc').textContent;
+
+    var eventMetadata = eventChipElement.querySelector('.XuJrye')?.textContent;
+    if (!eventMetadata) return;
+
     var diff = calculateDiff(eventMetadata);
 
     if (diff >= minimumDurationMs) {
