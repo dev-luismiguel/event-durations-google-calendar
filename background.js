@@ -4,6 +4,6 @@ function openOptionsPage() {
   chrome.tabs.create({url: optionsPath});
 }
 
-chrome.browserAction.onClicked.addListener(function(tab) {
+chrome.action.onClicked.addListener(function(tab) {
   openOptionsPage();
 });
